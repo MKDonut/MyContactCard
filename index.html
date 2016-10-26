@@ -1,10 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html land="en">
   <head>
     <meta charset="utf-8">
-    <title>October Git Demo</title>
+    <title>October Git Demo/Contact Card Assignment</title>
+	<meta name= "description" content="jQuery Functions assignment:I">
+	<link rel = "stylesheet" href="contact_card.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+	
+	$(document).ready(function(){
+		$(document).on('click','h3',function(){
+			$(this).siblings('p').slideToggle("slow")
+
+		});
+		
+
+		$('form').submit(function(){
+			var firstName= $('input[name="FirstName"]').val();
+			var lastName= $('input[name="LastName"]').val();
+			var description= $('textarea[name="Description"]').val();
+			if(firstName == 0 || lastName ==0 || description ==0){
+				alert("Please fill out the entire form before submitting!");
+				}
+			else{
+
+			$('#rightside').append('<div class="classcard"><h3>' + firstName + lastName + '</h3><p>' + description +'.</p></div>');
+
+			return false;
+		}
+		});
+
+	});
+  </script>
+
   </head>
   <body>
-    <h1>HI</h1>
-  </body>
-</html>
+  	<div id="wrapper">
+  		<h1>Contact Card</h1>
+  		<div id="leftside">
+	  		<form>
+	  			First Name:<input type="text" name="FirstName" placeholder="First Name">
+	  			Last Name:<input type="text" name="LastName" placeholder="Last Name">
+	  			Description:<textarea type="text" name="Description" placeholder="Enter your description here..." rows="5" cols="30"></textarea>
+	  			<input type="submit" value="Add User">
+  			</form>
+		</div> <!-- end of leftside -->
+		<div id="rightside">
+			
+			
+		</div> <!-- end of righside -->
+
+
+  	</div> <!-- end of wrapper -->
+
+  
+
+  

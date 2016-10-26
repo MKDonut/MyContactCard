@@ -1,0 +1,49 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+#wrapper{
+	width: 970px;
+	height: auto;
+	background: lightgrey;
+	margin: 0 auto;
+}
+
+
+#leftside, #rightside{
+	display:inline-block;
+	vertical-align: top;
+	width: 350px;
+	height: auto;
+	margin:0px 0px 0px 25px;
+}
+
+
+h1{
+	border-bottom: solid;
+	padding:15px;
+}
+
+p{
+	display: none;
+}
+
+
+input, textarea{
+	display:block;
+	margin: 10px;
+	color: blue;
+}
+
+
+
+.classcard{
+	border: solid;
+	width: 200px;
+	padding: 20px;
+	margin: 15px;
+}
+
+
